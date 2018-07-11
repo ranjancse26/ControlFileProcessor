@@ -1,0 +1,16 @@
+﻿LOAD DATA APPEND
+  INTO TABLE ALM_LAV_CD_BSTG
+FIELDS TERMINATED BY '~~' 
+TRAILING NULLCOLS
+(                                                                               
+   ALM_VERS_ID                      Decimal EXTERNAL NULLIF (ALM_VERS_ID=BLANKS)
+ , LAV_CD                           CHAR NULLIF (LAV_CD=BLANKS)                 
+ , LAV_CD_OFSE                      INTEGER EXTERNAL NULLIF (LAV_CD_OFSE=BLANKS)
+ , LAV_CD_AMT                       DECIMAL EXTERNAL NULLIF (LAV_CD_AMT=BLANKS) 
+ , EXPRT_DT                         DATE "YYYY-MM-DD"
+ , DUA_INSRT_ID                     CHAR NULLIF (DUA_INSRT_ID=BLANKS)           
+ , DUA_INSRT_TMSTP                  TIMESTAMP "YYYY-MM-DD HH24:MI:SS.FF6"                                            
+ , DUA_UPDT_ID                      CHAR NULLIF (DUA_UPDT_ID=BLANKS)            
+ , DUA_UPDT_TMSTP                   TIMESTAMP "YYYY-MM-DD HH24:MI:SS.FF6"                                            
+ , DUA_VERS_NBR                     DECIMAL EXTERNAL NULLIF (DUA_VERS_NBR=BLANKS)                                                                               
+)      
